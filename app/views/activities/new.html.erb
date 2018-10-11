@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<header>
+		<%= render 'header' %>
+	</header>
+	<p class="session"><%= render 'session' %></p>
+
+	<br><br><br>
+	<section>
+		<div class="welcome_box_black">
+			<h1>Activities</h1>
+			<%= render 'form' %>
+			<%= link_to 'Back', activities_path %>
+		</div>	
+	</section>
+	<br><br><br>
+	<footer>
+		<%= render 'footer'%>
+	</footer>
+</body>
+</html>

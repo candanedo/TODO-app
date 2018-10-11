@@ -1,0 +1,31 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<%= wicked_pdf_stylesheet_link_tag 'pdf'%>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Initial Date</th>
+				<th>Final Date</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<%= @activitie.tasks.each do |task| %>
+			<tr>
+				<td><%= task.name %></td>
+				<td><%= task.description %></td>
+				<td><%= task.initial_date %></td>
+				<td><%= task.final_date %></td>
+
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</body>
+</html>

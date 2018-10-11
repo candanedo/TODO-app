@@ -1,0 +1,36 @@
+<div class="welcome_box_black">
+  <p>
+    Download:
+    <%= link_to "CSV", activity_tasks_path(format: "csv") %> |
+    <%= link_to "PDF", activity_tasks_path(format: "pdf") %>
+  </p>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Initial Date</th>
+      <th>Final Date</th>
+      <th>Activity id</th>
+      <th>Task id</th>
+      <th></th>
+    </tr>
+   
+    <% @activitie.tasks.each do |task| %>
+      <tr>
+        <td><%= task.name %></td>
+        <td><%= task.description %></td>
+        <td><%= task.initial_date %></td>
+        <td><%= task.final_date %></td>
+        <td><%= task.activitie_id %></td>
+        <td><%= task.id %></td>
+        <td><%= link_to 'Show', activity_task_path(@activitie, task) %></td>
+        <td><%= link_to 'Edit', edit_activity_task_path(@activitie, task)%></td>
+        <td><%= link_to 'Destroy', activity_task_path(@activitie, task),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= link_to 'Back', activities_path %>
+</div>

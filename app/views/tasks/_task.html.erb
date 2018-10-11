@@ -1,0 +1,28 @@
+<div class="welcome_box_black">
+	<h1 align="center">Task</h1>
+	<br><br>
+	<div align="center">
+		<p>
+		  <strong>Name:</strong>
+		  <%= @task.name %>
+		</p>
+		 
+		<p>
+		  <strong>Description:</strong>
+		  <%= @task.description %>
+		</p>
+
+		<p>
+		  <strong>Initial Date/Time:</strong>
+		  <%= @task.initial_date %>
+		</p>
+
+		<p>
+		  <strong>Initial Date/Time:</strong>
+		  <%= @task.final_date %>
+		</p>
+
+		<%= link_to 'Back', activity_tasks_path %>
+	</div>
+	
+</div>

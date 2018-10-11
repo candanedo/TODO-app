@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+      <%= render 'header'%>
+  </header>
+
+  <p class="session"><%= render 'session' %></p>
+  <br><br><br>
+  <section>
+    <div class ="welcome_box_black">
+      <h1>Activity</h1>
+      <p>
+        <strong>Name:</strong>
+        <%= @activitie.name %>
+      </p>   
+      <p>
+      <strong>Description:</strong>
+        <%= @activitie.description %>
+      </p>
+      <p>
+        <strong>Initial Date/Time:</strong>
+        <%= @activitie.initial_date %>
+      </p>
+      <p>
+        <strong>Initial Date/Time:</strong>
+          <%= @activitie.final_date %>
+      </p>
+    </div>
+  </section>
+    
+  <br><br><br>
+
+  <section>
+    <div class ="welcome_box_black">
+      <h1>Tasks</h1>
+      <table>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Initial Date</th>
+            <th>Final Date</th>
+            <th>Activity id</th>
+            <th>Task id</th>
+            <th></th>
+          </tr>
+         
+          <% @activitie.tasks.each do |task| %>
+            <tr>
+              <td><%= task.name %></td>
+              <td><%= task.description %></td>
+              <td><%= task.initial_date %></td>
+              <td><%= task.final_date %></td>
+              <td><%= task.activitie_id %></td>
+              <td><%= task.id %></td>
+              <td><%= link_to 'Show', activity_task_path(@activitie, task) %></td>
+              <td><%= link_to 'Edit', edit_activity_task_path(@activitie, task) %></td>
+              <td><%= link_to 'Destroy', activity_task_path(@activitie, task),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+              </td>
+            </tr>
+          <% end %>
+      </table>
+    </div>
+  </section>
+    
+  <br><br><br>
+  <section>
+    <div class ="welcome_box_black">
+      <h2>Add a Task:</h2>
+      <%= form_with(model: [ @activitie, @activitie.tasks.build ], local: true) do |form| %>
+        <p>
+          <%= form.label :name %><br>
+          <%= form.text_field :name %>
+        </p>
+        <p>
+          <%= form.label :description %><br>
+          <%= form.text_area :description %>
+        </p>
+        <p>
+          <%= form.label :initial_date %><br>
+          <%= form.datetime_select :initial_date %>
+        </p>
+        <p>
+          <%= form.label :final_date %><br>
+          <%= form.datetime_select :final_date %>
+        </p>
+        <p>
+          <%= form.submit %>
+        </p>
+      <% end %>
+      <p><%= link_to 'Edit', edit_activity_path(@activitie) %>|
+      <%= link_to 'Back', activities_path %></p>
+    </div>
+  </section>
+  <br><br><br>
+  <footer>
+      <%= render 'footer' %>
+  </footer>
+</body>
+</html>

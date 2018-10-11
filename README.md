@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TODO App
 
-Things you may want to cover:
+Yo should develop a TODO App that includes the following features
 
-* Ruby version
+Users should login to the App (Devise/Omniauth)
 
-* System dependencies
+Users can create, read, update and delete (CRUD) lists of TODOs
 
-* Configuration
+Users can CRUD taks on a list
 
-* Database creation
+Users can export their lists with their tasks to CSV and PDF files.
 
-* Database initialization
+Users should receive weekly email including pending tasks (using emails and
+BackgroundJobs with Sidekiq and Redis)
 
-* How to run the test suite
+Users can update your profile: name, email, description and photo (photo must be 
+uploaded, you could use paperclip for this task)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app must include unit tests with Rspec and integration with Capybara
