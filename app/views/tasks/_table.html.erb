@@ -25,7 +25,8 @@
         <td><%= task.id %></td>
         <td><%= link_to 'Show', activity_task_path(@activitie, task), :style=>'color:#FFFFFF;' %></td>
         <td><%= link_to 'Edit', edit_activity_task_path(@activitie, task), :style=>'color:#FFFFFF;'%></td>
-        <td><%= link_to 'Destroy', activity_task_path(@activitie, task), :style=>'color:#FFFFFF;',
+        <td><%= link_to 'Destroy', activity_task_path(@activitie, task), 
+                :style=>'color:#FFFFFF;',
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
         </td>
