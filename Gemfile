@@ -28,6 +28,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'redis'
+gem 'redis-rails'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
 # Use ActiveModel has_secure_password
