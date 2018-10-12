@@ -56,6 +56,16 @@ body {
     background-color: black;
     padding: 50px 50px;
 }
+
+.welcome_box_black_user{
+    position: absolute;
+    left: 30%;
+    display: block;
+    background-color: black;
+    padding: 50px 50px;
+    width: 350px;
+}
+
 .welcome_box_transparent{
 
     display: block;

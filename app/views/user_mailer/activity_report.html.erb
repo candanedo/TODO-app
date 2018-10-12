@@ -4,26 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi <%= @user.name %>, TODO app wants to remind about your following activities.</h1>
-    <table>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Initial Date</th>
-            <th>Final Date</th>
-            <th>User ID</th>
-            <th></th>
-          </tr>
-         
-          <% @activities.each do |activitie| %>
-            <tr>
-              <td><%= activitie.name %></td>
-              <td><%= activitie.description %></td>
-              <td><%= activitie.initial_date %></td>
-              <td><%= activitie.final_date %></td>
-              <td><%= activitie.user_id%></td>
-            </tr>
-          <% end %>
-        </table>
+    <h1>Hi , TODO app wants to remind about your following activities.</h1>
+    
   </body>
 </html>

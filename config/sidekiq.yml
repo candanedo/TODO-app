@@ -6,5 +6,6 @@
  - mailers
 :schedule:
   first:
-    cron: '0 * * * * *'   # Runs once per minute
+    cron: '0 * * * * *'   # Every minute
+    #cron: '0 5 * * 1'   # Every monday of the week
     class: 'EWorker'

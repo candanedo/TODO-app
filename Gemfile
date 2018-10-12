@@ -38,7 +38,9 @@ gem "letter_opener", :group => :development
 gem "devise-async"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem "google-cloud-storage", "~> 1.8", require: false
+gem "azure-storage", require: false
+gem "aws-sdk-s3", require: false
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
