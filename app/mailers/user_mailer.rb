@@ -30,9 +30,7 @@ class UserMailer < ApplicationMailer
 		format.html
 	end
   end
- #  def activity_report(user)
- #  		mail(:to => "<#{user.email}>", :subject => "Activities Report")
-
-	# end
- #  end
+  def activity_report(user)
+  		mail(:to => "<#{user}>", :subject => "Activities Report")
+  end
 end

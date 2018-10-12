@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
   user = User.new(
+      :name                  => "Eduardo Javier Candanedo Contreras",
       :email                 => "eduardo.candanedo.94@gmail.com",
       :password              => "edjacaco010294",
       :password_confirmation => "edjacaco010294"
@@ -13,6 +14,7 @@
   user.save
    
   user = User.new(
+      :name                  => "Manuel Gomez",
       :email                 => "manuel.gomez@gmail.com",
       :password              => "edjacaco",
       :password_confirmation => "edjacaco"
@@ -20,6 +22,7 @@
   user.save
 
     user = User.new(
+      :name                  => "Marifer Candanedo",
       :email                 => "mafercaco@gmail.com",
       :password              => "edjacaco",
       :password_confirmation => "edjacaco"
@@ -27,6 +30,7 @@
   user.save
 
    user = User.new(
+      :name                  => "Maria Candanedo",
       :email                 => "mafercado@gmail.com",
       :password              => "edjacaco",
       :password_confirmation => "edjacaco"

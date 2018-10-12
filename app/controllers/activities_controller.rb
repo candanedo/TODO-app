@@ -27,6 +27,7 @@ class ActivitiesController < ApplicationController
   def create
 	  @activitie = Activitie.new(activitie_params.merge(:user_id => current_user.id))
     if @activitie.save
+      UserMailer.activity_report(current_user.email).deliver
       redirect_to @activitie
 	  else
 	    render 'new'
