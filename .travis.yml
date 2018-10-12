@@ -1,5 +1,11 @@
-language: ruby
-rvm:
-  - 2.2
-  - jruby
-  - 2.0.0-p247
+before_deploy:
+  - git config --local user.name "candanedo"
+  - git config --local user.email "eduardo.candanedo.94@gmail.com"
+  - git tag "$(date + '%Y%m%d%H%M%S')-$(git log --format=%h -1)" 
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true
