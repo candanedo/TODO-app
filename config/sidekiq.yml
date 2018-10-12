@@ -3,6 +3,7 @@
 :logfile: #./log/sidekiq.log
 :queues:
  - default
+ - mailers
 :schedule:
   first:
     cron: '0 * * * * *'   # Runs once per minute

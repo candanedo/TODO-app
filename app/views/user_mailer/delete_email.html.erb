@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Sorry to see you leave <%= @user.name %>, we hope to see you soon</h1>
+    <p>
+      You have successfully deleted your account linked to this email: <%= @user.email%>,
+      hope to see you soon.
+    </p>
+    <p>
+      To register again visit the site, just follow this link: <%= @url %>.
+    </p>
+    <p>Thanks for been part of us!</p>
+  </body>
+</html>
