@@ -26,9 +26,8 @@ class ActivitiesController < ApplicationController
 
   def create
 	  @activitie = Activitie.new(activitie_params.merge(:user_id => current_user.id))
-	
     if @activitie.save
-	    redirect_to @activitie
+      redirect_to @activitie
 	  else
 	    render 'new'
 	  end
@@ -49,7 +48,6 @@ class ActivitiesController < ApplicationController
   	redirect_to activities_path
 
   end
-
 
   private
   def activitie_params

@@ -10,9 +10,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    UserMailer.with(user: @user).welcome_email.deliver_now
+     
+  end
 
   # GET /resource/edit
   # def edit
@@ -20,14 +22,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    super
+    UserMailer.with(user: @user).update_info.deliver_now  
+  end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super
+    UserMailer.with(user: @user).delete_email.deliver_now   
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign

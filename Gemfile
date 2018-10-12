@@ -32,10 +32,10 @@ gem 'redis-rails'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
 # Use ActiveModel has_secure_password
-
+gem "letter_opener", :group => :development
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem "devise-async"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
