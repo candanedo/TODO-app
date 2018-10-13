@@ -2,10 +2,9 @@ language: ruby
 rvm:
   - 2.5.1
 
-script:
-  - bundle exec rspec
+install: true
 
 notifications:
   slack: false
-  email: false
+  email: true
   
