@@ -7,5 +7,5 @@ script:
 
 notifications:
   slack: false
-  email: true
+  email: false
   
