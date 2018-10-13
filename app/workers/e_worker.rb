@@ -1,9 +1,12 @@
 require 'sidekiq-scheduler'
 class EWorker
   include Sidekiq::Worker
-
+  sidekiq_options retry: false
   def perform(*args)
+  	users = User.all
     puts "Im a background worker"
-    UserMailer.activity_report("eduardo.candanedo.94@gmail.com").deliver_now
+    users.each do |user|
+    	UserMailer.activity_report(user.email).deliver_now
+	end
   end
 end
