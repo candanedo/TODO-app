@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_133540) do
     t.text "description"
     t.datetime "initial_date"
     t.datetime "final_date"
-    t.integer "activitie_id"
+    t.bigint "activitie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["activitie_id"], name: "index_tasks_on_activitie_id"
@@ -76,4 +76,5 @@ ActiveRecord::Schema.define(version: 2018_10_12_133540) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "tasks", "activities", column: "activitie_id"
 end
