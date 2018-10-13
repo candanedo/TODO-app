@@ -2,7 +2,8 @@ language: ruby
 rvm:
   - 2.5.1
 
-install: true
+script:
+  - bundle exec rake db:setup
 
 notifications:
   slack: false
