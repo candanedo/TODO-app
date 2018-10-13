@@ -3,9 +3,9 @@ rvm:
   - 2.5.1
 
 script:
-  - bundle exec rake db:setup
+  - bundle exec rspec
 
 notifications:
   slack: false
-  email: true
+  email: false
   
