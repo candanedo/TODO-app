@@ -1,4 +1,7 @@
+
 <div class="welcome_box_black_user" align="center">
+<%= image_tag "welcome/magma.png", width: "300px", :style=>"align:center;"%>
+<br><br>
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -37,4 +40,16 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<br><br>
+<%= link_to 'Home Page', welcome_index_path, :style=>"
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+" %>
 </div>

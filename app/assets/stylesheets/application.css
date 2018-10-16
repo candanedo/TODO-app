@@ -14,12 +14,13 @@
  *= require_self
  */
 
-.navvar-home{
+.navvar{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: black;
+    
 }
 
 

@@ -6,10 +6,8 @@
 </head>
 <body>
 	<header>
-		<%= render 'activities/header'%>
-			
+		<%= render 'semantic/header'%>	
 	</header>
-	<p class="session"><%= render 'session' %></p>
 	<br>
 	<br>
 	<br>
@@ -36,17 +34,10 @@
 		All you need to do to get started is to create an account or if you already have one, you can simply login and manage your lists and tasks.</p>
 		<br>
 		<br>
-		
-
 	</div>
 	<br><br><br>
-	<footer class="welcome_box_black">
-		<div class="img_task" align="center">
-			<%= image_tag "welcome/magma2.png", width: '300px' %>
-			<br>
-			&copy;Copyright 2018 MagmaLabs
-			<p>Web Site create by Eduardo Javier Candanedo</p>
-		</div>
+	<footer>
+		<%= render 'semantic/footer'%>
 	</footer>
 </body>
 </html>

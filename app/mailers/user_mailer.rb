@@ -1,7 +1,7 @@
 class UserMailer < ApplicationMailer
   default from: 'notifications@TODOapp.com'
-  def welcome_email
-  	@user = params[:user]
+  def welcome_email(user)
+  	@user = user
 	@url  = 'http://localhost:3000'
 	mail(to: @user.email, 
 		subject: 'Welcome to My Awesome Site'
@@ -10,8 +10,8 @@ class UserMailer < ApplicationMailer
 		format.html
 	end
   end
-  def delete_email
-  	@user = params[:user]
+  def delete_email(user)
+  	@user = user
 	@url  = 'http://localhost:3000'
 	mail(to: @user.email, 
 		subject: 'We´ll definitley miss you'
@@ -20,8 +20,8 @@ class UserMailer < ApplicationMailer
 		format.html
 	end
   end
-  def update_info
-  	@user = params[:user]
+  def update_info(user)
+  	@user = user
 	@url  = 'http://localhost:3000'
 	mail(to: @user.email, 
 		subject: 'There were changes made to you accont'

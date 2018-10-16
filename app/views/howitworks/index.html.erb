@@ -5,9 +5,8 @@
 </head>
 <body>
 	<header>
-		<%= render 'activities/header' %> 
+		<%= render 'semantic/header' %> 
 	</header>
-	<p class="session"><%= render 'session' %></p>
 	<br>
 	<br>
 	<br>
@@ -25,11 +24,11 @@
 				<li>Users can export their lists with their tasks to CSV and PDF files.</li>
 				<dd>- Done</dd>
 				<li>Users should receive weekly email including pending tasks (using emails and BackgroundJobs with Sidekiq and Redis)</li>
-				<dd>- In Process, Already implemented Sidekiq and Redis for BackgroudJobs now missing the email send anctions.</dd>
+				<dd>- Done.</dd>
 				<li>Users can update your profile: name, email, description and photo (photo must be uploaded, you could use paperclip for this task)</li>
-				<dd>- In Process</dd>
+				<dd>- Done</dd>
 				<li>The app must include unit tests with Rspec and integration with Capybara</li>
-				<dd>- In Process</dd>
+				<dd>- Pending</dd>
 			</ul>
 		</div>
 	</div>
@@ -37,7 +36,7 @@
 	<br>
 	<br>
 	<footer>
-		<%= render 'activities/footer' %>
+		<%= render 'semantic/footer' %>
 	</footer>
 </body>
 </html>
