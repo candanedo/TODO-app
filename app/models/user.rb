@@ -13,6 +13,20 @@ class User < ApplicationRecord
   after_create :after_create_send_email
   #after_update :after_update_send_email
   after_destroy :after_delete_send_email
+
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.name = auth.infor.name
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0,20]
+      user.name = auth.info.name   # assuming the user model has a name
+      user.avatar = auth.info.image # assuming the user model has an image
+      # If you are using confirmable and the provider(s) you use validate emails, 
+      # uncomment the line below to skip the confirmation emails.
+      # user.skip_confirmation!
+    end
+  end
+
   private
   def has_image_attached
   	if !avatar.attached?
