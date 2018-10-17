@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'rails_helper'
 
-class ActivitieTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+RSpec.describe Activitie, type: :model do
+ context 'validations' do
+
+ end
 end

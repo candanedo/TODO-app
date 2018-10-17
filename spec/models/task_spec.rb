@@ -1,7 +1,9 @@
-require 'test_helper'
+require 'rails_helper'
 
-class TaskTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+RSpec.describe Task, type: :model do
+  describe "GET #index" do
+    it "renders the index template" do
+     
+    end
+  end
 end
