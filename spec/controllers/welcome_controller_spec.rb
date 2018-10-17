@@ -1,9 +1,12 @@
-require 'test_helper'
+require 'rails_helper'
 
-class WelcomeControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get welcome_index_url
-    assert_response :success
+RSpec.describe WelcomeController, type: :controller do
+
+  describe "GET #index" do
+    it "returns http success" do
+      get :index
+      expect(response).to have_http_status(:success)
+    end
   end
 
 end

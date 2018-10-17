@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'rails_helper'
 
-class TasksControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+RSpec.describe TasksController, type: :controller do
+	it "Returns all tasks for the especified Activity" do
+	end
+
 end

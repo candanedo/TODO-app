@@ -3,10 +3,9 @@ require 'rails_helper'
 RSpec.describe AboutController, type: :controller do
 
   describe "GET #index" do
-    it "returns http success" do
+	it "has a 200 status code" do
       get :index
-      expect(response).to have_http_status(:success)
+      expect(response.status).to eq(200)
     end
   end
-
 end
