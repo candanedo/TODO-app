@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'about/index'
   get 'howitworks/index'
   resources :widgets
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users, controllers: { registrations: 'users/registrations', omniauth_callbacks: 'users/omniauth_callbacks' }
   get 'welcome/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :activities
