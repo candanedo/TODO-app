@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  require 'open-uri'
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   
@@ -14,12 +15,14 @@ class User < ApplicationRecord
   #after_update :after_update_send_email
   after_destroy :after_delete_send_email
 
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.name = auth.infor.name
+      user.name = auth.info.name
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      user.avatar = auth.info.image 
+      downloaded_image = open(auth.info.image)
+      user.avatar.attach(io: downloaded_image, filename: 'avatar.jpg', content_type: downloaded_image.content_type)
     end
   end
 
