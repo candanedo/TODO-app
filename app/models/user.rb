@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   
   devise :database_authenticatable, :async, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[github]
 
   has_many :activities
   has_one_attached :avatar
@@ -29,6 +29,15 @@ class User < ApplicationRecord
   end
   def after_update_send_email
     UserMailer.update_info(self).deliver_now
+  end
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.name = auth.info.name 
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0,20]
+       
+      user.image = auth.info.image
+    end
   end
 end
 
