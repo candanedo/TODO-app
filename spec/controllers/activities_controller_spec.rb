@@ -1,12 +1,17 @@
 require 'rails_helper'
 
 
-RSpec.describe AboutController, type: :controller do
-
-  describe "GET #index" do
-    it "returns all Activities according to the current_user" do
+RSpec.describe ActivitiesController do
+  describe "GET index" do
+    it "assigns @activities" do
+      activitie = Activitie.create
       get :index
-      expect(response).to have_http_status(:success)
+      expect(assigns(:activitie)).to eq([activities])
+    end
+
+    it "renders the index template" do
+      get :index
+      expect(response).to render_template("index")
     end
   end
 end
