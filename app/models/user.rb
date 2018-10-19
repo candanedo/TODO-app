@@ -35,8 +35,8 @@ class User < ApplicationRecord
       user.name = auth.info.name 
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      #downloaded_image = open(auth.info.image)
-      #user.avatar.attach(io: downloaded_image, filename: 'avatar.jpg', content_type: downloaded_image.content_type)
+      downloaded_image = open(auth.info.image)
+      user.avatar.attach(io: downloaded_image, filename: 'avatar.jpg', content_type: downloaded_image.content_type)
     end
   end
 end
