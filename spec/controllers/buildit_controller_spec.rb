@@ -1,12 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe BuilditController, type: :controller do
-
+RSpec.describe BuilditController do
   describe "GET #index" do
-    it "returns http success" do
+    it "Renders the view, returns 200" do
       get :index
-      expect(response).to have_http_status(:success)
+      expect(response.status).to eq(200)
     end
   end
-
 end
