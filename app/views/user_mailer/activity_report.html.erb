@@ -5,5 +5,26 @@
   </head>
   <body>
     <h1>Hi , TODO app wants to remind about your following activities.</h1>
+    <% @activities.each do |activity| %>
+
+    <% end %>
+    <table>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Initial Date</th>
+            <th>Final Date</th>
+            <th></th>
+          </tr>
+         
+          <% @activities.each do |activity| %>
+            <tr>
+              <td><%= activity.name %></td>
+		      <td><%= activity.description %></td>
+		      <td><%= activity.initial_date %></td>
+		      <td><%= activity.final_date %></td>
+            </tr>
+          <% end %>
+        </table>
   </body>
 </html>
