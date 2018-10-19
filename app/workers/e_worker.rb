@@ -6,7 +6,8 @@ class EWorker
   	users = User.all
     puts "Im a background worker"
     users.each do |user|
-    	UserMailer.activity_report(user.email).deliver_now
+    	activities = Activitie.where(user_id: user.id)
+    	UserMailer.activity_report(user.email,  activities).deliver_now
 	end
   end
 end
