@@ -117,11 +117,6 @@ GEM
     et-orbi (1.1.6)
       tzinfo
     execjs (2.7.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
@@ -368,7 +363,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-async
-  factory_girl_rails
   google-cloud-storage (~> 1.8)
   jbuilder (~> 2.5)
   letter_opener
