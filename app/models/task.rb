@@ -1,9 +1,7 @@
 class Task < ApplicationRecord
   belongs_to :activitie
-  validates :name, presence: true,
-                    length: { minimum: 5 }
-  validates :description, presence: true,
-                    length: { minimum: 5 }
+  validates :name, presence: true, length: { minimum: 5 }
+  validates :description, presence: true, length: { minimum: 5 }
   validates :initial_date, presence: true
   validates :final_date, presence: true
   def self.to_csv
