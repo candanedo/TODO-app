@@ -35,4 +35,6 @@ Now the only thing you are missing is configuring Sidekiq, for that simply type 
 
 Then you would be able to use the project locally.
 
+### Deployment.
 
+You can also check the app on heroku https://todoappcandanedo.herokuapp.com
